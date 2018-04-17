@@ -1,0 +1,127 @@
+<!--pages/analysis/analysis.wxml-->
+<view class='container'>
+<view class='box1'>
+   <view class='title-box'>
+       <view class='hongxian'></view>
+       <view class='title'>客户</view>
+   </view>
+   <view class='detial-box1'>
+      <view class='list-box'>
+        <view class='xian'>
+         <view class='word'>昨日新增客户(人)</view>
+         <view class='num'>{{num1}}</view>
+        </view>
+      </view>
+      <view class='list-box'>
+      <view class='xian'>
+         <view class='word'>客单价</view>
+         <view class='num'>{{num1}}</view>
+      </view>
+      </view>
+      <view class='list-box'>
+      <view class='xian'>
+         <view class='word'>客户总数(人)</view>
+         <view class='num'>{{num1}}</view>
+      </view>
+       </view>
+      <view class='list-box'>
+      <view class='xian'>
+         <view class='word'>回头率</view>
+         <view class='num'>{{num1}}</view>
+      </view>
+      </view>
+   </view>
+</view>
+<view class='box1'>
+   <view class='title-box'>
+       <view class='hongxian'></view>
+       <view class='title'>订单</view>
+   </view>
+   <view class='detial-box1'>
+      <view class='list-box'>
+      <view class='xian'>
+         <view class='word'>昨日支付订单(笔)</view>
+         <view class='num'>{{num1}}</view>
+      </view>
+      </view>
+      <view class='list-box'>
+      <view class='xian'>
+         <view class='word'>昨日退款订单(笔)</view>
+         <view class='num'>{{num1}}</view>
+      </view>
+      </view>
+      <view class='list-box'>
+      <view class='xian'>
+         <view class='word'>近30日支付转化率</view>
+         <view class='num'>{{num1}}</view>
+      </view>
+      </view>
+      <view class='list-box'>
+      <view class='xian'>
+         <view class='word'>近30日退款率</view>
+         <view class='num'>{{num1}}</view>
+      </view>
+      </view>
+   </view>
+</view>
+<view class='box2'>
+   <view class='title-box'>
+       <view class='hongxian'></view>
+       <view class='title'>金额</view>
+   </view>
+   <view class='detial-box2'>
+      <view class='list-box'>
+      <view class='xian'>
+         <view class='word'>昨日支付总额(元)</view>
+         <view class='num'>{{num1}}</view>
+      </view>
+      </view>
+      <view class='list-box'>
+      <view class='xian'>
+         <view class='word'>昨日退款总额(元)</view>
+         <view class='num'>{{num1}}</view>
+      </view>
+      </view>
+   </view>
+</view>
+<view class='box2'>
+   <view class='title-box'>
+       <view class='hongxian'></view>
+       <view class='title'>访客</view>
+   </view>
+   <view class='detial-box2'>
+      <view class='list-box'>
+      <view class='xian'>
+         <view class='word'>昨日访问(人)</view>
+         <view class='num'>{{num1}}</view>
+      </view>
+      </view>
+      <view class='list-box'>
+      <view class='xian'>
+         <view class='word'>昨日浏览(人)</view>
+         <view class='num'>{{num1}}</view>
+      </view>
+      </view>
+   </view>
+</view>
+<view class='box2'>
+   <view class='title-box'>
+       <view class='hongxian'></view>
+       <view class='title'>商品</view>
+   </view>
+   <view class='detial-box2'>
+      <view class='list-box'>
+      <view class='xian'>
+         <view class='word'>在售商品总数(件)</view>
+         <view class='num'>{{num1}}</view>
+      </view>
+      </view>
+      <view class='list-box'>
+      <view class='xian'>
+         <view class='word'>近30日浏览-下单转化率</view>
+         <view class='num'>{{num1}}</view>
+      </view>
+      </view>
+   </view>
+</view>
+</view>

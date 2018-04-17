@@ -1,0 +1,44 @@
+<!--pages/my/my.wxml-->
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+
+  <view class="zan-panel">
+    <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd zan-icon zan-icon-location">\t收货地址</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+    <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd zan-icon zan-icon-add-o">\t绑定账号</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+  </view>
+
+    <view class="zan-panel">
+    <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd zan-icon zan-icon-contact">\t个人资料</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+    <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd zan-icon zan-icon-records">\t我的合同</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+  </view>
+
+    <view class="zan-panel">
+    <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd zan-icon zan-icon-pending-evaluate">\t通知设置</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+    <view class="zan-cell zan-cell--access">
+      <view class="zan-cell__bd zan-icon zan-icon-phone">\t联系客服</view>
+      <view class="zan-cell__ft"></view>
+    </view>
+  </view>
+
+  

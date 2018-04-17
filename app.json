@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/my/my",
+    "pages/manage/manage",
+    "pages/analysis/analysis",
+    "pages/manage/edit"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ef7b4b",
+    "navigationBarTitleText": "胡虾卖",
+    "navigationBarTextStyle":"#cc3333"
+  },
+  "tabBar":{
+    "selectedColor":"#ef7b4b",
+    "font-size":"100rpx",
+    "list":[{
+      "pagePath":"pages/index/index",
+      "iconPath": "imgs/toolbars/shouye.png",
+      "selectedIconPath": "imgs/toolbars/shouyeed.png",
+      "text":"首页"
+    },
+    {
+      "pagePath": "pages/manage/manage",
+      "iconPath": "imgs/toolbars/guanli.png",
+      "selectedIconPath": "imgs/toolbars/guanlied.png",
+      "text": "店铺管理"
+    },
+    {
+      "pagePath": "pages/analysis/analysis",
+      "iconPath": "imgs/toolbars/shuju.png",
+      "selectedIconPath": "imgs/toolbars/shujued.png",
+      "text": "经营分析"
+    },
+    {
+      "pagePath":"pages/my/my",
+      "iconPath":"imgs/toolbars/my.png",
+      "selectedIconPath":"imgs/toolbars/myed.png",
+      "text": "我的"
+    }]
+  }
+}
