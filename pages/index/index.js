@@ -47,12 +47,26 @@ Page({
       num3: 150,
     })
   },
-  bindKeyInput: function (e) {
-    this.setData({
-      inputValue: e.detail.value
+  Click2: function () {
+    wx.scanCode({
+      success: (res) => {
+        wx.showToast({
+          title: '成功',
+          icon: 'success',
+          duration: 2000
+        })
+      },
+      fail: (res) => {
+        wx.showToast({
+          title: '失败',
+          icon: 'success',
+          duration: 2000
+        })
+      },
+      complete: (res) => {
+      }
     })
-  }
-
+  }  
 
   
 })  

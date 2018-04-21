@@ -1,0 +1,35 @@
+/* pages/index2/bangding.wxss */
+.phone{
+  margin:20px 0px 0px 20px;
+  height: 50px;
+  font-size: 17px;
+  border-bottom: 1px solid gainsboro;
+  
+}
+.yanzheng{
+  margin:0px 0px 0px 20px;
+  height: 50px;
+  font-size: 17px;
+  border-bottom: 1px solid gainsboro;
+  width: 100%;
+}
+.fidpas_inp2{
+  width: 60%;
+  float: left;
+}
+#ma{
+  margin-top: 8px;
+  width: 140px;
+  margin-right: 10px;
+  float: left;
+  text-align: left;
+  height: 70%;
+  font-size: 16px;
+  background-color: #72777b;
+  color: white;
+  line-height: 200%
+}
+.lgbut{
+  margin-top: 30px;
+  background-color: #ed1941;
+}

@@ -7,8 +7,8 @@
           <view class='tools-name'>店铺预览</view>
       </view>
       <view class='tools'>
-          <view class='tools-img'><image src='{{src2}}' alt="扫码预览"></image></view>
-          <view class='tools-name'>扫码验证</view>
+          <view class='tools-img' bindtap='Click2'><image src='{{src2}}' alt="扫码预览"></image></view>
+          <view class='tools-name' bindtap='Click2'>扫码验证</view>
       </view>
       <view class='tools'>
           <view class='tools-img'><image src='{{src3}}' alt="二维码"></image></view>

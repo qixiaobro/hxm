@@ -14,6 +14,11 @@ Page({
       url: '../logs/logs'
     })
   },
+  call: function () {
+    wx.makePhoneCall({
+      phoneNumber: '15880275889' //仅为示例，并非真实的电话号码
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

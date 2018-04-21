@@ -10,18 +10,18 @@
 
   <view class="zan-panel">
     <view class="zan-cell zan-cell--access">
-      <view class="zan-cell__bd zan-icon zan-icon-location">\t收货地址</view>
+      <navigator class="zan-cell__bd zan-icon zan-icon-location" url="../shouhuo/shouhuo" open-type="navigate" hover-class="none">\t收货地址</navigator>
       <view class="zan-cell__ft"></view>
     </view>
     <view class="zan-cell zan-cell--access">
-      <view class="zan-cell__bd zan-icon zan-icon-add-o">\t绑定账号</view>
+      <navigator class="zan-cell__bd zan-icon zan-icon-add-o" url="../bangding/bangding" open-type="navigate" hover-class="none">\t绑定账号</navigator>
       <view class="zan-cell__ft"></view>
     </view>
   </view>
 
     <view class="zan-panel">
     <view class="zan-cell zan-cell--access">
-      <view class="zan-cell__bd zan-icon zan-icon-contact">\t个人资料</view>
+      <navigator class="zan-cell__bd zan-icon zan-icon-contact" url="../person/person" open-type="navigate" hover-class="none">\t个人资料</navigator>
       <view class="zan-cell__ft"></view>
     </view>
     <view class="zan-cell zan-cell--access">
@@ -36,7 +36,7 @@
       <view class="zan-cell__ft"></view>
     </view>
     <view class="zan-cell zan-cell--access">
-      <view class="zan-cell__bd zan-icon zan-icon-phone">\t联系客服</view>
+      <view class="zan-cell__bd zan-icon zan-icon-phone" bindtap='call'>\t联系客服</view>
       <view class="zan-cell__ft"></view>
     </view>
   </view>

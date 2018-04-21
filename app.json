@@ -4,7 +4,12 @@
     "pages/my/my",
     "pages/manage/manage",
     "pages/analysis/analysis",
-    "pages/manage/edit"
+    "pages/manage/edit",
+    "pages/spgl/spgl",
+    "pages/xsgl/xsgl",
+    "pages/shouhuo/shouhuo",
+    "pages/person/person",
+    "pages/bangding/bangding"
   ],
   "window":{
     "backgroundTextStyle":"light",

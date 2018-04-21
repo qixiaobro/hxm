@@ -1,0 +1,22 @@
+<!--pages/index2/person.wxml-->
+<view class='text'>
+    <view class='text1'>
+      <view class='word'>昵称:</view>
+      <input class='name'></input>
+    </view>
+    <view class='text2'>
+      <view class='word'>性别:</view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">{{array[index]}}</view>
+      </picker>
+    </view>
+    <view class='text3'>
+      <view class='word'>邮箱:</view>
+      <input class='email'></input>
+    </view>
+    <view class='text4'>
+      <view class='word'>简介:</view>
+      <textarea class='detail' placeholder='简单描述一下自己'></textarea>
+    </view>
+    <button class='baocun'>保存</button>
+</view>

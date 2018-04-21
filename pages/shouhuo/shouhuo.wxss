@@ -1,0 +1,63 @@
+/* pages/shouhuo/shouhuo.wxss */
+.text1{
+  margin-top: 30px;
+  height: 30px;
+  width: 100%;
+  border-bottom: 1px solid gainsboro;
+}
+.word{
+  font-size: 15px;
+  width: 20%;
+  margin-left: 10px;
+  float:left;
+}
+.name{
+  width: 70%;
+  font-size: 14px;
+
+}
+.text2{
+  margin-top: 10px;
+  height: 30px;
+  width: 100%;
+  border-bottom: 1px solid gainsboro;
+}
+
+.telephone{
+  width: 70%;
+  font-size: 14px;
+}
+.text3{
+  margin-top: 10px;
+  height: 30px;
+  width: 100%;
+  border-bottom: 1px solid gainsboro;
+}
+.picker{
+  font-size: 14px;
+  width: 70%;
+  float: right;
+}
+.text4{
+  margin-top: 10px;
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid gainsboro;
+}
+.detail{
+  width: 70%;
+  font-size: 14px;
+  float: left;
+  height: 50px;
+}
+.zan-cell zan-cell--switch{
+  height: 30px;
+}
+.baocun{
+  background-color: #f26522;
+  margin: 30px 20px 0px 40px;
+  font-size: 15px;
+  color: white;
+  width: 80%;
+  align-content: center
+}

@@ -31,14 +31,18 @@
       <view class='fgx'></view>
       <view class='tools-list-box'>
            <view class='img-list-box'>
-              <view class='img'>
+               <navigator url="../spgl/spgl" open-type="navigate" hover-class="none">
+               <view class='img'>
                  <image src='{{img1}}'></image>
-                 <view class='name'>商品管理</view>
-              </view>
+                 <view class='name'> 商品管理</view>
+               </view>
+               </navigator>
+               <navigator url="../xsgl/xsgl" open-type="navigate" hover-class="none">
               <view class='img'>
                  <image src='{{img2}}'></image>
                  <view class='name'>销售管理</view>
               </view>
+              </navigator>
               <view class='img'>
                   <image src='{{img3}}'></image>
                   <view class='name'>顾客管理</view>
