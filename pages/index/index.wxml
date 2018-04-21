@@ -1,76 +1,88 @@
 <!--index.wxml-->
 
-<view class="container">    <!--功能列表-->
-   <view class='tools-box'>
-      <view class='tools'>
-          <view class='tools-img'><image src='{{src1}}' alt="店铺预览"></image></view>
-          <view class='tools-name'>店铺预览</view>
+<view class="container">
+  <!--功能列表-->
+  <view class='tools-box'>
+    <view class='tools'>
+      <view class='tools-img'>
+        <image src='{{src1}}' alt="店铺预览"></image>
       </view>
-      <view class='tools'>
-          <view class='tools-img' bindtap='Click2'><image src='{{src2}}' alt="扫码预览"></image></view>
-          <view class='tools-name' bindtap='Click2'>扫码验证</view>
+      <view class='tools-name'>店铺预览</view>
+    </view>
+    <view class='tools'>
+      <view class='tools-img' bindtap='Click2'>
+        <image src='{{src2}}' alt="扫码预览"></image>
       </view>
-      <view class='tools'>
-          <view class='tools-img'><image src='{{src3}}' alt="二维码"></image></view>
-          <view class='tools-name'>二维码</view>
+      <view class='tools-name' bindtap='Click2'>扫码验证</view>
+    </view>
+    <view class='tools'>
+      <view class='tools-img'>
+        <image src='{{src3}}' alt="二维码"></image>
       </view>
-      <view class='tools'>
-          <view class='tools-img'><image src='{{src4}}' alt="买单收款"></image></view>
-          <view class='tools-name'>买单收款</view>
+      <view class='tools-name'>二维码</view>
+    </view>
+    <view class='tools'>
+      <view class='tools-img'>
+        <image src='{{src4}}' alt="买单收款"></image>
       </view>
-   </view>
+      <view class='tools-name'>买单收款</view>
+    </view>
+  </view>
 
-   <view class='fgx'></view>
+  <view class='fgx'></view>
 
-  <view class='banner'>     <!--幻灯片-->
-        <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">    
-           <block wx:for="{{movies}}" wx:for-index="index">    
-                  <swiper-item>    
-                      <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>    
-                  </swiper-item>    
-           </block>    
-        </swiper>    
-     </view> 
+  <view class='banner'>
+    <!--幻灯片-->
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+      <block wx:for="{{movies}}" wx:for-index="index">
+        <swiper-item>
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
 
-   <view class='fgx'></view>
+  <view class='fgx'></view>
 
-   <view class='store-msg'>                    <!--店铺信息-->
-       <view class='title-box'>
-          <view class='title'>
-              <view class='title-img'>
-                 <image src='{{src5}}'></image>
-              </view>
-              <view class='title-name'><view class='title-name-size'>经营数据</view></view>
-              <view class='btn-box'> 
-                 <button class="zan-btn zan-btn--mini zan-btn--primary " hover-class="other-button-hover" bindtap='change1'>今天</button>
-                 <button class="zan-btn zan-btn--mini zan-btn--primary " hover-class="other-button-hover" bindtap='change2'>昨天</button>
-                 <button class="zan-btn zan-btn--mini zan-btn--primary " hover-class="other-button-hover" bindtap='change3'>近7天</button>
-              </view>
-          </view>
+  <view class='store-msg'>
+    <!--店铺信息-->
+    <view class='title-box'>
+      <view class='title'>
+        <view class='title-img'>
+          <image src='{{src5}}'></image>
         </view>
-       <view class='msg-box'>
-          <view class='zongshouru-box'>
-              <view class='zongshouru-title'>总收入(元)</view>
-              <view class='zongshouru-num'>{{sum}}</view>
-          </view>
-          <view class='qita-list-box'>
-             <view class='xiadanbishu'>
-                <view class='list-title'>下单数</view>
-                <view class='number'>{{num1}}</view>
-             </view>
-             <view class='pingjiashu'>
-                <view class='list-title'>新增评价数</view>
-                <view class='number'>{{num2}}</view>
-             </view>
-             <view class='customers'>
-                <view class='list-title'>新增客户数</view>
-                <view class='number'>{{num3}}</view>
-             </view>
-          </view>
-       </view>
-       <view id='fgx2'></view>
-       <navigator class='lookdetail' url="../analysis/analysis" open-type="switchTab" hover-class="other-navigator-hover">查看详情</navigator>
+        <view class='title-name'>
+          <view class='title-name-size'>经营数据</view>
+        </view>
+        <view class='btn-box'>
+          <button class="zan-btn zan-btn--mini zan-btn--primary " hover-class="other-button-hover" bindtap='change1'>今天</button>
+          <button class="zan-btn zan-btn--mini zan-btn--primary " hover-class="other-button-hover" bindtap='change2'>昨天</button>
+          <button class="zan-btn zan-btn--mini zan-btn--primary " hover-class="other-button-hover" bindtap='change3'>近7天</button>
+        </view>
+      </view>
+    </view>
+    <view class='msg-box'>
+      <view class='zongshouru-box'>
+        <view class='zongshouru-title'>总收入(元)</view>
+        <view class='zongshouru-num'>{{sum}}</view>
+      </view>
+      <view class='qita-list-box'>
+        <view class='xiadanbishu'>
+          <view class='list-title'>下单数</view>
+          <view class='number'>{{num1}}</view>
+        </view>
+        <view class='pingjiashu'>
+          <view class='list-title'>新增评价数</view>
+          <view class='number'>{{num2}}</view>
+        </view>
+        <view class='customers'>
+          <view class='list-title'>新增客户数</view>
+          <view class='number'>{{num3}}</view>
+        </view>
+      </view>
+    </view>
+    <view id='fgx2'></view>
+    <navigator class='lookdetail' url="../analysis/analysis" open-type="switchTab" hover-class="other-navigator-hover">查看详情</navigator>
 
-   </view>            
+  </view>
 </view>
-

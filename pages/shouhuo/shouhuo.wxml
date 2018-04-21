@@ -1,34 +1,33 @@
 <!--pages/shouhuo/shouhuo.wxml-->
 <import src="/dist/switch/index.wxml" />
-  <view class='text'>
-    <view class='text1'>
-      <view class='word'>收货人</view>
-      <input class='name'></input>
-    </view>
-    <view class='text2'>
-      <view class='word'>联系电话</view>
-      <input class='telephone'></input>
-    </view>
-    <view class='text3'>
-      <view class="word">所在地区</view>
-      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+<view class='text'>
+  <view class='text1'>
+    <view class='word'>收货人</view>
+    <input class='name'></input>
+  </view>
+  <view class='text2'>
+    <view class='word'>联系电话</view>
+    <input class='telephone'></input>
+  </view>
+  <view class='text3'>
+    <view class="word">所在地区</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
       <view class="picker">
-       {{region[0]}}，{{region[1]}}，{{region[2]}}
+        {{region[0]}}，{{region[1]}}，{{region[2]}}
       </view>
-      </picker>
-    </view>
-    <view class='text4'>
-      <view class='word'>详细地址</view>
-      <textarea class='detail' placeholder='请输入详细地址，如道路、门牌等'></textarea>
-    </view>
-   
-    <view class="zan-cell zan-cell--switch">
-        <view class="zan-cell__bd">设为默认地址</view>
-        <view class="zan-cell__ft">
-        <template is="zan-switch" data="{{checked}}"/>
-        </view>
-    </view>
-    <button class='baocun'>保存</button>
-    
+    </picker>
+  </view>
+  <view class='text4'>
+    <view class='word'>详细地址</view>
+    <textarea class='detail' placeholder='请输入详细地址，如道路、门牌等'></textarea>
   </view>
 
+  <view class="zan-cell zan-cell--switch">
+    <view class="zan-cell__bd">设为默认地址</view>
+    <view class="zan-cell__ft">
+      <template is="zan-switch" data="{{checked}}" />
+    </view>
+  </view>
+  <button class='baocun'>保存</button>
+
+</view>

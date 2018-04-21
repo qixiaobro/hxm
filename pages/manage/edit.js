@@ -4,12 +4,12 @@ var dianming = app.globalData.dianming;
 var jianjie = app.globalData.jianjie;
 Page({
   data: {
-    dianming:dianming,
-    jianjie:jianjie
+    dianming: dianming,
+    jianjie: jianjie
   },
-  edit1:function(e){
+  edit1: function (e) {
     this.setData({
-        dianming:e.detail.value
+      dianming: e.detail.value
     })
     //app.globalData.dianming = dianming;
     console.log(dianming);

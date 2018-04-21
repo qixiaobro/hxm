@@ -1,13 +1,13 @@
-<form bindsubmit="formSubmit" bindreset="formReset"> 
-<view class="fidpas"> 
-  <view class='phone'>
-    <input type="number" class="fidpas_inp"placeholder-class="lgin_place" placeholder="请输入手机号" name="phonenumber" /> 
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="fidpas">
+    <view class='phone'>
+      <input type="number" class="fidpas_inp" placeholder-class="lgin_place" placeholder="请输入手机号" name="phonenumber" />
+    </view>
+    <view class='yanzheng'>
+      <input type="number" class="fidpas_inp2" placeholder-class="lgin_place" placeholder="请输入短信验证码" name="msg" />
+      <button id='ma' class="{{sendmsg}}" bindtap="sendmessg">{{getmsg}}</button>
+    </view>
+
+    <button class="lgbut" formType="submit">确定</button>
   </view>
-  <view class='yanzheng'>
-      <input type="number" class="fidpas_inp2"placeholder-class="lgin_place" placeholder="请输入短信验证码" name="msg" /> 
-      <button id='ma' class="{{sendmsg}}" bindtap="sendmessg">{{getmsg}}</button> 
-  </view>
-      
-      <button class="lgbut" formType="submit">确定</button> 
-</view> 
-</form> 
+</form>

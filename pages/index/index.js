@@ -1,4 +1,5 @@
 //index.js
+import Http from '../../utils/http';
 //获取应用实例
 const app = getApp()
 
@@ -66,7 +67,68 @@ Page({
       complete: (res) => {
       }
     })
-  }  
+  },
+  /** 
+ * 生命周期函数--监听页面加载
+ */
+  onLoad: function (options) {
+    var that = this;
+    // 获取用户授权及信息
+    Http.authorize()
+      .then(() => Http.getUserInfo())
+      .then((res) => {
+        console.log(res);
+        //用户信息数据处理操作
 
-  
+        // if (!app.globalData.isReAuth) {
+        //   that.setData({
+        //     userInfo: res
+        //   })
+        //   try {
+        //     var ssid = wx.getStorageSync('ssid')
+        //     if (ssid) {
+        //       if (!app.globalData.changeState) {
+        //         that.getFavData(ssid);
+        //       }
+        //     }
+        //   } catch (e) {
+        //     console.log(e);
+        //   }
+        // }
+      }).catch(() => {
+        Http.getUserInfo().then((res) => {
+          // that.setData({
+          //   userInfo: res
+          // })
+          // try {
+          //   var ssid = wx.getStorageSync('ssid')
+          //   if (ssid) {
+          //     that.getFavData(ssid);
+          //   }
+          // } catch (e) {
+          //   console.log(e);
+          // }
+        })
+      })
+    //登录
+    Http.login().then((res) => {
+      // 获取到code之后的操作
+      // 获取openid
+      Http.get('api/wxapp/public/login', { code: res.code, app_type: 'WX_MM_MANAGE' }).then(
+        (res) => {
+          if (res.data.success && res.data.data.openid != '' && res.data.data.token != '') {
+            wx.setStorageSync('openid', res.data.data.openid);
+            wx.setStorageSync('token', res.data.data.token);
+          } else {
+            //获取openid失败操作
+          }
+        }
+      );
+    })
+    var self = this
+    //正常异步请求
+    // Http.get('userinfo').then(function (res) {
+    //   //返回数据处理
+    // });
+  } 
 })  

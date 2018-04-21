@@ -1,53 +1,55 @@
 <!--pages/manage/manage.wxml-->
 <view class='container'>
-     <view class='store-msg'>
-          <view class='btn-box'>
-             <button id='btn' class="zan-btn zan-btn--small zan-btn--primary " hover-class="other-button-hover" bindtap='set'>编辑</button>
-           </view>
-          <view class='logo-box'><image src='{{src1}}'></image></view>
-          <view class='detail-box'>
-               <view class='dianming-box'>
-                  <view>店铺名称:{{dianming}}</view>
-               </view>
-               <view class='jianjie-box ' >
-                  <view>店铺简介:{{jianjie}}</view>
-               </view>
-          </view>
- 
-     </view>
-     
-     <view class='msg-box'>
-         <view class='num'>
-            <view class='num1'>{{num1}}</view>
-            <view class='num1'>{{num2}}</view>
-            <view class='num1'>{{num3}}</view>
-         </view>
-         <view class='title'>
-            <view class='title1'>浏览人数</view>
-            <view class='title1'>付款订单数</view>
-            <view class='title1'>待付款数</view>
-         </view>
-     </view>
-      <view class='fgx'></view>
-      <view class='tools-list-box'>
-           <view class='img-list-box'>
-               <navigator url="../spgl/spgl" open-type="navigate" hover-class="none">
-               <view class='img'>
-                 <image src='{{img1}}'></image>
-                 <view class='name'> 商品管理</view>
-               </view>
-               </navigator>
-               <navigator url="../xsgl/xsgl" open-type="navigate" hover-class="none">
-              <view class='img'>
-                 <image src='{{img2}}'></image>
-                 <view class='name'>销售管理</view>
-              </view>
-              </navigator>
-              <view class='img'>
-                  <image src='{{img3}}'></image>
-                  <view class='name'>顾客管理</view>
-              </view>
-           </view>
+  <view class='store-msg'>
+    <view class='btn-box'>
+      <button id='btn' class="zan-btn zan-btn--small zan-btn--primary " hover-class="other-button-hover" bindtap='set'>编辑</button>
+    </view>
+    <view class='logo-box'>
+      <image src='{{src1}}'></image>
+    </view>
+    <view class='detail-box'>
+      <view class='dianming-box'>
+        <view>店铺名称:{{dianming}}</view>
       </view>
-      <view class='fgx1'></view>
+      <view class='jianjie-box '>
+        <view>店铺简介:{{jianjie}}</view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='msg-box'>
+    <view class='num'>
+      <view class='num1'>{{num1}}</view>
+      <view class='num1'>{{num2}}</view>
+      <view class='num1'>{{num3}}</view>
+    </view>
+    <view class='title'>
+      <view class='title1'>浏览人数</view>
+      <view class='title1'>付款订单数</view>
+      <view class='title1'>待付款数</view>
+    </view>
+  </view>
+  <view class='fgx'></view>
+  <view class='tools-list-box'>
+    <view class='img-list-box'>
+      <navigator url="../spgl/spgl" open-type="navigate" hover-class="none">
+        <view class='img'>
+          <image src='{{img1}}'></image>
+          <view class='name'> 商品管理</view>
+        </view>
+      </navigator>
+      <navigator url="../xsgl/xsgl" open-type="navigate" hover-class="none">
+        <view class='img'>
+          <image src='{{img2}}'></image>
+          <view class='name'>销售管理</view>
+        </view>
+      </navigator>
+      <view class='img'>
+        <image src='{{img3}}'></image>
+        <view class='name'>顾客管理</view>
+      </view>
+    </view>
+  </view>
+  <view class='fgx1'></view>
 </view>

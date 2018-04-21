@@ -1,7 +1,8 @@
 <!--pages/manage/edit.wxml-->
 <view class='box'>
-店铺名称:<input type='text' confirm-type="done" bindtap='edit1'  placeholder='{{dianming}}'>{{dianming}}</input>
-店铺简介:<input type='text' confirm-type="done" placeholder='{{jianjie}}'>{{jianjie}}</input>
-<!--<button type='primary' form-type='submit' bindtap='edit'>修改</button>>-->
+  店铺名称:
+  <input type='text' confirm-type="done" bindtap='edit1' placeholder='{{dianming}}'>{{dianming}}</input>
+  店铺简介:
+  <input type='text' confirm-type="done" placeholder='{{jianjie}}'>{{jianjie}}</input>
+  <!--<button type='primary' form-type='submit' bindtap='edit'>修改</button>>-->
 </view>
-

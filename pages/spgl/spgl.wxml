@@ -1,23 +1,28 @@
-
-
 <view class='page_row' bindtap='suo'>
   <view class='search'>
     <view class='search_arr'>
       <icon class='searchicon' size='20' type='search'></icon>
-      <input class='ss' disabled placeholder='请输入关键字' value='{{searchvalue}}'/>
+      <input class='ss' disabled placeholder='请输入关键字' value='{{searchvalue}}' />
     </view>
   </view>
   <view class='sousuo'>搜索</view>
-  
+
 </view>
 <view class='fenlie'>
-  <view class='n1' hover-class="changestyle"><span class='w1'>全部</span></view>
-  <view class='n2' hover-class="changestyle"><span class='w1'>即将售完</span></view>
-  <view class='n3' hover-class="changestyle"><span class='w1'>热销</span></view>
-  <view class='n4' hover-class="changestyle"><span class='w1'>滞销</span></view>
+  <view class='n1' hover-class="changestyle">
+    <span class='w1'>全部</span>
+  </view>
+  <view class='n2' hover-class="changestyle">
+    <span class='w1'>即将售完</span>
+  </view>
+  <view class='n3' hover-class="changestyle">
+    <span class='w1'>热销</span>
+  </view>
+  <view class='n4' hover-class="changestyle">
+    <span class='w1'>滞销</span>
+  </view>
 </view>
 <view class='xian'></view>
 <view class='yu'>
-<view class='tianjia' bindtap='tijian'>添加商品</view>
+  <view class='tianjia' bindtap='tijian'>添加商品</view>
 </view>
-

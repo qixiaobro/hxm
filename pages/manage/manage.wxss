@@ -1,12 +1,13 @@
 /* pages/manage/manage.wxss */
-.store-msg{
+
+.store-msg {
   width: 100%;
   height: 300rpx;
   background-color: #ef7b4b;
   padding-top: 20rpx;
 }
 
-.logo-box{
+.logo-box {
   width: 20%;
   height: 150rpx;
   background-color: #fff;
@@ -15,12 +16,12 @@
   border-radius: 100%;
 }
 
-.logo-box image{
+.logo-box image {
   max-width: 100%;
   max-height: 100%;
 }
 
-#btn{
+#btn {
   margin-left: 80%;
 }
 
@@ -28,7 +29,7 @@
   background-color: red;
 }
 
-.detail-box{
+.detail-box {
   width: 60%;
   height: 200rpx;
   background-color: #ef7b4b;
@@ -37,44 +38,44 @@
   line-height: 60rpx;
 }
 
-.dianming-box{
+.dianming-box {
   width: 100%;
   height: 65rpx;
 }
 
-.jianjie-box{
+.jianjie-box {
   width: 100%;
   height: 135rpx;
 }
 
-.jianjie-box{
+.jianjie-box {
   width: 100%;
 }
 
-.fgx1{
+.fgx1 {
   width: 100%;
   height: 10rpx;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 }
 
-.msg-box{
+.msg-box {
   width: 100%;
   height: 120rpx;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 }
 
-.num{
+.num {
   width: 100%;
   height: 50rpx;
   padding-top: 20rpx;
 }
 
-.title{
+.title {
   width: 100%;
   height: 50rpx;
 }
 
-.num1{
+.num1 {
   width: 33.3%;
   height: 50rpx;
   float: left;
@@ -82,7 +83,7 @@
   text-align: center;
 }
 
-.title1{
+.title1 {
   width: 33.3%;
   height: 50rpx;
   float: left;
@@ -91,32 +92,31 @@
   font-size: small;
 }
 
-.tools-list-box{
+.tools-list-box {
   width: 100%;
   height: 400rpx;
-  background-color: #Fff;
+  background-color: #fff;
 }
 
-.img-list-box{
+.img-list-box {
   width: 100%;
   height: 200rpx;
 }
 
-.img{
-  width:33.3333%;
+.img {
+  width: 33.3333%;
   height: 200rpx;
   float: left;
 }
 
-.img image{
+.img image {
   max-height: 40%;
   max-width: 40%;
   margin-left: 30%;
   margin-top: 30rpx;
 }
 
-.name{
+.name {
   text-align: center;
   font-size: 26rpx;
 }
-
