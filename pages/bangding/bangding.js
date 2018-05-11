@@ -1,47 +1,21 @@
 // pages/index2/bangding.js
+import Http from '../../utils/http';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    sendmsg: "sendmsg",
-    getmsg: "获取短信验证码",
+    field: ['user_type']
   },
-  /** 
-  * 获取短信验证码 
-  */
-  sendmessg: function (e) {
-    if (timer == 1) {
-      timer = 0
-      var that = this
-      var time = 60
-      that.setData({
-        sendmsg: "sendmsgafter",
-      })
-      var inter = setInterval(function () {
-        that.setData({
-          getmsg: time + "s后重新发送",
-        })
-        time--
-        if (time < 0) {
-          timer = 1
-          clearInterval(inter)
-          that.setData({
-            sendmsg: "sendmsg",
-            getmsg: "获取短信验证码",
-          })
-        }
-      }, 1000)
-    }
-  },
+
 
   
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
   },
 
   /**
@@ -69,7 +43,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**

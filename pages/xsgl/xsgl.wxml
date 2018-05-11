@@ -1,34 +1,193 @@
 <!--pages/index/index.wxml-->
-<view class='biao'>
- 
-  <view class="doc-title zan--bottom" style="margin: 0px 20px 20px 20px">我的订单</view>
 
-</view>
-<view class="swiper-tab"> 
-
-  <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view> 
-  <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待付款</view> 
-  <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">待收货</view> 
+<view class="swiper-tab">
+  <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
+  <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待付款</view>
+  <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">待收货</view>
   <view class="tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">待发货</view>
   <view class="tab-item {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">已完成订单</view>
-</view> 
-  
-<swiper current="{{currentTab}}" class="swiper" duration="300" style="height:{{winHeight - 30}}px" bindchange="bindChange"> 
- <swiper-item > 
-    <view>页面一</view>
- </swiper-item> 
- <swiper-item> 
-  <view>页面er</view> 
- </swiper-item> 
- <swiper-item> 
-  <view>页面三</view> 
- </swiper-item> 
- <swiper-item> 
-  <view>页面四</view> 
- </swiper-item> 
- <swiper-item> 
-  <view>页面五</view> 
- </swiper-item> 
+</view>
+
+<swiper current="{{currentTab}}" class="swiper" duration="300" style="height:{{winHeight - 30}}px" bindchange="bindChange">
+  <swiper-item>
+    <view class='all1'>
+      <view class='status-tap'>
+        <view class='status'>待付款</view>
+        <view class='ordertime'>2018-5-9</view>
+      </view>
+      <view class='content-box'>
+        <view class='content'>
+          <view class='image-box'>
+            <image src='https://gd1.alicdn.com/imgextra/i4/0/TB1TsUXdCYTBKNjSZKbXXXJ8pXa_!!0-item_pic.jpg'></image>
+          </view>
+          <view class='wordname-box'>
+            <view class='goodsname'>品名：</view>
+            <view class='custname'>收件人：</view>
+            <view class='phone'>电话：</view>
+            <view class='address'>地址：</view>
+          </view>
+          <view class='word-box'>
+            <view class='word'>KENZO 春夏新款男装衬衫短袖</view>
+            <view class='word'>朱晓东</view>
+            <view class='word'>15606957673</view>
+            <view class='word'>福建厦门集美大学</view>
+          </view>
+        </view>
+        <view class='many'>
+          <view class='num'>共{{num}}件商品</view>
+          <view class='total'>总计: ￥{{total}}</view>
+          <view class='yunfei'>(运费:￥{{yunfei}})</view>
+        </view>
+      </view>
+      <view class='fgx'></view>
+      <view class='option-box'>
+        <button class='btn1' type='default'>订单详情</button>
+      </view>
+    </view>
+  </swiper-item>
+
+  <swiper-item>
+    <view class='all1'>
+      <view class='status-tap'>
+        <view class='status'>待付款</view>
+        <view class='ordertime'>2018-5-9</view>
+      </view>
+      <view class='content-box'>
+        <view class='content'>
+          <view class='image-box'>
+            <image src='https://gd1.alicdn.com/imgextra/i4/0/TB1TsUXdCYTBKNjSZKbXXXJ8pXa_!!0-item_pic.jpg'></image>
+          </view>
+          <view class='wordname-box'>
+            <view class='goodsname'>品名：</view>
+            <view class='custname'>收件人：</view>
+            <view class='phone'>电话：</view>
+            <view class='address'>地址：</view>
+          </view>
+          <view class='word-box'>
+            <view class='word'>KENZO 春夏新款男装衬衫短袖</view>
+            <view class='word'>朱晓东</view>
+            <view class='word'>15606957673</view>
+            <view class='word'>福建厦门集美大学</view>
+          </view>
+        </view>
+        <view class='many'>
+          <view class='num'>共{{num}}件商品</view>
+          <view class='total'>总计: ￥{{total}}</view>
+          <view class='yunfei'>(运费:￥{{yunfei}})</view>
+        </view>
+      </view>
+      <view class='fgx'></view>
+      <view class='option-box'>
+        <button class='btn1' type='default'>订单详情</button>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='all1'>
+      <view class='status-tap'>
+        <view class='status'>待收货</view>
+        <view class='ordertime'>2018-5-9</view>
+      </view>
+      <view class='content-box'>
+        <view class='content'>
+          <view class='image-box'>
+            <image src='https://gd1.alicdn.com/imgextra/i4/0/TB1TsUXdCYTBKNjSZKbXXXJ8pXa_!!0-item_pic.jpg'></image>
+          </view>
+          <view class='wordname-box'>
+            <view class='goodsname'>品名：</view>
+            <view class='custname'>收件人：</view>
+            <view class='phone'>电话：</view>
+            <view class='address'>地址：</view>
+          </view>
+          <view class='word-box'>
+            <view class='word'>KENZO 春夏新款男装衬衫短袖</view>
+            <view class='word'>朱晓东</view>
+            <view class='word'>15606957673</view>
+            <view class='word'>福建厦门集美大学</view>
+          </view>
+        </view>
+        <view class='many'>
+          <view class='num'>共{{num}}件商品</view>
+          <view class='total'>总计: ￥{{total}}</view>
+          <view class='yunfei'>(运费:￥{{yunfei}})</view>
+        </view>
+      </view>
+      <view class='fgx'></view>
+      <view class='option-box'>
+        <button class='btn1' type='default'>订单详情</button>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='all1'>
+      <view class='status-tap'>
+        <view class='status'>待发货</view>
+        <view class='ordertime'>2018-5-9</view>
+      </view>
+      <view class='content-box'>
+        <view class='content'>
+          <view class='image-box'>
+            <image src='https://gd1.alicdn.com/imgextra/i4/0/TB1TsUXdCYTBKNjSZKbXXXJ8pXa_!!0-item_pic.jpg'></image>
+          </view>
+          <view class='wordname-box'>
+            <view class='goodsname'>品名：</view>
+            <view class='custname'>收件人：</view>
+            <view class='phone'>电话：</view>
+            <view class='address'>地址：</view>
+          </view>
+          <view class='word-box'>
+            <view class='word'>KENZO 春夏新款男装衬衫短袖</view>
+            <view class='word'>朱晓东</view>
+            <view class='word'>15606957673</view>
+            <view class='word'>福建厦门集美大学</view>
+          </view>
+        </view>
+        <view class='many'>
+          <view class='num'>共{{num}}件商品</view>
+          <view class='total'>总计: ￥{{total}}</view>
+          <view class='yunfei'>(运费:￥{{yunfei}})</view>
+        </view>
+      </view>
+      <view class='fgx'></view>
+      <view class='option-box'>
+        <button class='btn1' type='default'>订单详情</button>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='all1'>
+      <view class='status-tap'>
+        <view class='status'>已完成</view>
+        <view class='ordertime'>2018-5-9</view>
+      </view>
+      <view class='content-box'>
+        <view class='content'>
+          <view class='image-box'>
+            <image src='https://gd1.alicdn.com/imgextra/i4/0/TB1TsUXdCYTBKNjSZKbXXXJ8pXa_!!0-item_pic.jpg'></image>
+          </view>
+          <view class='wordname-box'>
+            <view class='goodsname'>品名：</view>
+            <view class='custname'>收件人：</view>
+            <view class='phone'>电话：</view>
+            <view class='address'>地址：</view>
+          </view>
+          <view class='word-box'>
+            <view class='word'>KENZO 春夏新款男装衬衫短袖</view>
+            <view class='word'>朱晓东</view>
+            <view class='word'>15606957673</view>
+            <view class='word'>福建厦门集美大学</view>
+          </view>
+        </view>
+        <view class='many'>
+          <view class='num'>共{{num}}件商品</view>
+          <view class='total'>总计: ￥{{total}}</view>
+          <view class='yunfei'>(运费:￥{{yunfei}})</view>
+        </view>
+      </view>
+      <view class='fgx'></view>
+      <view class='option-box'>
+        <button class='btn1' type='default'>订单详情</button>
+      </view>
+    </view>
+  </swiper-item>
 </swiper>
-
-

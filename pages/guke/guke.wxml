@@ -1,0 +1,30 @@
+<view class='seracharea'>
+  <input placeholder='🔍请输入姓名/电话'></input>
+</view>
+
+<view class='list-area'>
+  <scroll-view class="list" scroll-y="true" bindscrolltoupper="refresh" bindscrolltolower="loadMore">
+    <!--<view class="item" wx:for="{{contentlist}}" wx:key="index">
+      <view class="left">
+        <image src="{{item.contentImg}}"></image>
+      </view>
+      <view class="right">{{item.title}}</view>
+    </view>
+-->
+    <view class="item">
+      <view class="left">
+        <image src="../../imgs/toolbars/head.png"></image>
+      </view>
+      <view class="middle">
+        <view class='content'>
+          <view class='infor'>曙光科技有限公司</view>
+          <view class='infor'>15606957673</view>
+        </view>
+      </view>
+      <view class='right'>
+        <image src="../../imgs/toolbars/leftarrow.png"></image>
+      </view>
+      <view class='fgx'></view>
+    </view>
+  </scroll-view>
+</view>

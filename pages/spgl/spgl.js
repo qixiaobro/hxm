@@ -1,71 +1,66 @@
-// pages/index1/index1.js
+import Http from '../../utils/http';
+var app = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    /** 
+        * 页面配置 
+        */
+    src1: '../../imgs/toolbars/add.png',
+    num1:36,
+    num2:1356,
+    winWidth: 0,
+    winHeight: 0,
+    // tab切换  
+    currentTab: 0,
   },
+  onLoad: function () {
+    var that = this;
+    Http.get('biz/goods/Goods/goods_list').then(
+      (res) => {
+        if (res.data.code == 0) {
+          console.log(res.data)
+          avatar: that.data.avatar
+        } else {
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
+        }
+      }
+    );
+    /** 
+     * 获取系统信息 
+     */
+    wx.getSystemInfo({
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+      success: function (res) {
+        that.setData({
+          winWidth: res.windowWidth,
+          winHeight: res.windowHeight
+        });
+      }
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+    });
   },
+  /** 
+     * 滑动切换tab 
+     */
+  bindChange: function (e) {
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
+    var that = this;
+    that.setData({ currentTab: e.detail.current });
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
   },
+  /** 
+   * 点击tab切换 
+   */
+  swichNav: function (e) {
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
+    var that = this;
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  },
-  suo: function (e) {
-    wx.navigateTo({
-      url: '../index/index',
-    })
-  },  
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+        currentTab: e.target.dataset.current
+      })
+    }
+  }
 })

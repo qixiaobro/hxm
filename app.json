@@ -9,13 +9,17 @@
     "pages/xsgl/xsgl",
     "pages/shouhuo/shouhuo",
     "pages/person/person",
-    "pages/bangding/bangding"
+    "pages/bangding/bangding",
+    "pages/guke/guke",
+    "pages/index/qrcode",
+    "pages/index/createstore"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#ef7b4b",
     "navigationBarTitleText": "胡虾卖",
-    "navigationBarTextStyle":"#cc3333"
+    "navigationBarTextStyle":"#cc3333",
+    "backgroundColor": "#ef7b4b"
   },
   "tabBar":{
     "selectedColor":"#ef7b4b",

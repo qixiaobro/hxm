@@ -13,7 +13,7 @@ Page({
     src3: '../../imgs/list/erweima.png',
     src4: '../../imgs/list/maidan.png',
     src5: '../../imgs/list/jysj.png',
-    sum:2990,
+    sum: 2990,
     num1: 81,
     num2: 81,
     num3: 81,
@@ -24,9 +24,19 @@ Page({
       { url: 'http://img02.tooopen.com/images/20141231/sy_78327074576.jpg' }
     ]
   },
-  change1:function(e){
+  onPullDownRefresh: function () {
+    wx.showNavigationBarLoading() //在标题栏中显示加载
+
+    //模拟加载
+    setTimeout(function () {
+      // complete
+      wx.hideNavigationBarLoading() //完成停止加载
+      wx.stopPullDownRefresh() //停止下拉刷新
+    }, 1000);
+  },
+  change1: function (e) {
     this.setData({
-      sum:2990,
+      sum: 2990,
       num1: 81,
       num2: 81,
       num3: 81,
@@ -78,6 +88,29 @@ Page({
       .then(() => Http.getUserInfo())
       .then((res) => {
         console.log(res);
+        Http.get('biz/seller/Seller/currentSeller').then(  //获取店铺信息
+          (res) => {
+            if (res.data.code == 0) {   //如果可以获取，则代表用户已创建店铺
+              console.log(res.data.data)
+            } else {                   //否则 提示用户需不需要创建店铺
+              wx.showModal({
+                title: '创建店铺',
+                content: '想要创建一个属于自己的店铺吗？',
+                success: function (res) {
+                  if (res.confirm) {
+                    console.log('用户点击确定')
+                    wx.navigateTo({
+                      url: '../index/createstore',
+                    })
+                  } else if (res.cancel) {
+                    console.log('用户点击取消')
+                  }
+                }
+              })   
+            }
+          }
+        );
+       /*   */
         //用户信息数据处理操作
 
         // if (!app.globalData.isReAuth) {
@@ -116,9 +149,11 @@ Page({
       // 获取openid
       Http.get('api/wxapp/public/login', { code: res.code, app_type: 'WX_MM_MANAGE' }).then(
         (res) => {
-          if (res.data.success && res.data.data.openid != '' && res.data.data.token != '') {
+          console.log(res.data);
+          if (res.data.code == 0 && res.data.data.openid != '' && res.data.data.token != '') {
             wx.setStorageSync('openid', res.data.data.openid);
-            wx.setStorageSync('token', res.data.data.token);
+            wx.setStorageSync('Token', res.data.data.token);
+            
           } else {
             //获取openid失败操作
           }
@@ -130,5 +165,5 @@ Page({
     // Http.get('userinfo').then(function (res) {
     //   //返回数据处理
     // });
-  } 
+  }
 })  

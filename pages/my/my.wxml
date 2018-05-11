@@ -25,18 +25,14 @@
     <view class="zan-cell__ft"></view>
   </view>
   <view class="zan-cell zan-cell--access">
-    <view class="zan-cell__bd zan-icon zan-icon-records">\t我的合同</view>
+    <view class="zan-cell__bd zan-icon zan-icon-phone" bindtap='call'>\t联系客服</view>
     <view class="zan-cell__ft"></view>
   </view>
 </view>
 
 <view class="zan-panel">
-  <view class="zan-cell zan-cell--access">
-    <view class="zan-cell__bd zan-icon zan-icon-pending-evaluate">\t通知设置</view>
-    <view class="zan-cell__ft"></view>
-  </view>
-  <view class="zan-cell zan-cell--access">
-    <view class="zan-cell__bd zan-icon zan-icon-phone" bindtap='call'>\t联系客服</view>
-    <view class="zan-cell__ft"></view>
+  <view class="zan-cell">
+    <view class="zan-cell__bd zan-icon zan-icon-close" >\t开关商店</view>
+    <view class="zan-cell__ft"><switch  bindchange="switch1Change" style='color:red;' checked='{{value}}'/></view>
   </view>
 </view>

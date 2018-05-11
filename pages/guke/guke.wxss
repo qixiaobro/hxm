@@ -1,0 +1,84 @@
+/* pages/manage/guke.wxss */
+
+page {
+  height: 100%;
+}
+
+.seracharea {
+  width: 100%;
+  height: 5.5%;
+  background-color: #ececec;
+  padding-top: 2%;
+}
+
+.seracharea input {
+  width: 90%;
+  height: 50rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  margin-left: 5%;
+  padding-left: 2%;
+  font-size: 35rpx;
+}
+
+.list-area {
+  width: 100%;
+  height: 93%;
+}
+
+scroll-view {
+  height: 100%;
+}
+
+.item {
+  width: 100%;
+  height: 130rpx;
+}
+
+.left {
+  width: 20%;
+  height: 130rpx;
+  float: left;
+}
+
+.left image {
+  height: 90%;
+  width: 80%;
+  padding-left: 20%;
+  padding-top: 5%;
+}
+
+.middle {
+  width: 70%;
+  height: 130rpx;
+  float: left;
+}
+
+.right{
+  width: 10%;
+  height: 130rpx;
+  float: left;
+}
+
+.infor{
+  width: 100%;
+  height: 65rpx;
+  float: left;
+  font-size: 35rpx;
+  padding-top: 5rpx;
+  margin-left: 5%;
+}
+
+.right image{
+  width: 100%;
+  height: 50%;
+  padding-top: 30rpx;
+}
+
+.fgx{
+  width: 80%;
+  height: 2rpx;
+  background-color:#ececec;
+  float: left;
+  margin-left: 20%;
+}

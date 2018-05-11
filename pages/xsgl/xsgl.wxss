@@ -1,39 +1,157 @@
 
-/* pages/index/index.wxss */
-.swiper-tab{ 
- width: 100%; 
- text-align: center; 
- line-height: 80rpx; 
- border-bottom: 1px solid #000; 
- display: flex; 
- flex-direction: row; 
- justify-content: center; 
-} 
-.tab-item{ 
- flex: 1; 
- font-size: 30rpx; 
- display: inline-block;  
- color: #777777; 
-} 
-.on{ 
- color: red; 
- border-bottom: 1rpx solid red; 
-} 
-.swiper{ display: block; height: 100%; width: 100%; overflow: hidden; } 
-.swiper view{ 
- text-align: center; 
- padding-top: 100rpx; 
+page{
+  height: 100%;
 }
-.biao{
-  height: 50px;
+
+.swiper-tab {
   width: 100%;
-  background-color: #ef7b4b;
-}
-.changestyle{
-  color: red;
+  text-align: center;
+  line-height: 80rpx;
+  border-bottom: 1px solid #000;
+  display: flex;
+  flex-direction: row;
+  height: 7%;
 }
 
 .swiper{
-   position: relative;
-   margin: 0px 0px 5px 10px;
+  height: 92.8% !important;
+}
+
+.tab-item {
+  flex: 1;
+  font-size: 30rpx;
+  display: inline-block;
+  color: #777;
+}
+
+.on {
+  color: red;
+  border-bottom: 1rpx solid red;
+}
+
+.swiper {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.changestyle {
+  color: red;
+}
+
+.all1 {
+  width: 100%;
+  height: 365rpx;
+  background-color: #f9f9f9;
+}
+
+.status-tap {
+  width: 100%;
+  height: 60rpx;
+  background-color: #ffffff;
+}
+
+.content-box {
+  width: 100%;
+  height: 220rpx;
+}
+
+.option-box {
+  width: 100%;
+  height: 70rpx;
+  background-color: #ffffff;
+  padding-top: 5rpx;
+}
+
+.status {
+  float: left;
+  color: red;
+  font-size: 30rpx;
+  padding-top: 10rpx;
+  margin-left: 3%;
+}
+
+.ordertime {
+  float: right;
+  color: red;
+  font-size: 30rpx;
+  padding-top: 10rpx;
+  margin-right: 3%;
+}
+
+.content {
+  width: 100%;
+  height: 170rpx;
+  background-color: #f5f5f5;
+}
+
+.many {
+  width: 100%;
+  height: 50rpx;
+  background-color: #ffffff;
+  padding-left: 35%;
+  padding-top: 6rpx;
+}
+
+.image-box {
+  width: 23%;
+  height: 160rpx;
+  margin-left: 2%;
+  float: left;
+  padding-top: 7rpx;
+}
+
+.wordname-box {
+  width: 14%;
+  height: 170rpx;
+  float: left;
+  font-size: 27rpx;
+}
+
+.image-box image {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.goodsname, .custname, .phone, .address{
+  width: 100%;
+  height: 42.5rpx;
+  float: left;
+}
+
+.word-box{
+  width: 61%;
+  height: 170rpx;
+  float: left;
+  font-size: 27rpx;
+}
+
+.word{
+  width: 100%;
+  height: 42.5rpx;
+  float: left;
+}
+
+.num, .total,.yunfei{
+  font-size: 27rpx;
+  float: left;
+}
+
+.total,.yunfei{
+  margin-left: 2%;
+}
+
+.btn1{
+  width: 20%;
+  height: 50rpx;
+  font-size: 20rpx;
+  margin-left: 76%;
+  margin-top: 7rpx;
+}
+
+.fgx{
+  width: 100%;
+  height: 2rpx;
+  background-color: lightgray;
 }

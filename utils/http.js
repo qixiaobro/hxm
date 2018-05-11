@@ -4,7 +4,7 @@ class Http {
     this.accept = "application/json";
   }
   getToken() {//每次请求都带上token
-    let Token = wx.getStorageSync('token');
+    let Token = wx.getStorageSync('Token');
     return Token || "";
   }
   getOpenId() {//每次请求都带上token
@@ -24,7 +24,9 @@ class Http {
         header: {
           'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
           'accept': root.accept,
-          'Authorization': root.getToken() ? ('Bearer ' + root.getToken()) : ""
+          'Authorization': root.getToken() ? ('Bearer ' + root.getToken()) : "",
+          'XX-Device-Type':"wxapp",
+          "XX-Token": root.getToken()
         },
         dataType: 'json',
         method: type,
@@ -33,8 +35,8 @@ class Http {
           //如果token过期则替代掉
           if (res.data.token) {
             let Token = res.data.token;
-            wx.removeStorageSync('token');
-            wx.setStorageSync('token', Token);
+            wx.removeStorageSync('Token');
+            wx.setStorageSync('Token', Token);
           }
           switch (res.statusCode) {
             case 202:
@@ -46,7 +48,7 @@ class Http {
               });
               break;
             case 203: // 清除token信息并跳转到登录页面
-              wx.removeStorageSync('token');
+              wx.removeStorageSync('Token');
               wx.redirectTo({
                 url: 'pages/login/index',
               })

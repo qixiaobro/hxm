@@ -1,0 +1,28 @@
+<!--pages/index/qrcode.wxml-->
+<view class='container1'>
+  <view class='body'>
+    <view class='top'>
+      <view class='touxiang-box'>
+        <view class='touxiang'>
+          <image src='{{src1}}'></image>
+        </view>
+      </view>
+      <view class='wode-box'>
+        <view class='wode'>我的店铺</view>
+      </view>
+      <view class='fenxiang'>
+        <!--<view class='img-box'>
+          <image src='{{src2}}'></image>
+        </view>
+        <view class='share-box'>分享</view>-->
+        <button open-type='share'>分享</button>
+      </view>
+    </view>
+    <view class='middle'>
+      <view class='content'>扫一扫二维码，进入我的店铺</view>
+    </view>
+    <view class='code-box'>
+      <image src='{{src3}}'></image>
+    </view>
+  </view>
+</view>

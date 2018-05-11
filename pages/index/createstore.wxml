@@ -1,0 +1,58 @@
+<!--pages/index/createstore.wxml-->
+<view class='body'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+      <view class="head-portrait">
+        <view class='title1'>头像</view>
+        <image src="{{avatar2}}" bindtap='changeAvatar'></image>
+      </view>
+      <view class='input'>
+        <view class='title'>店铺名称</view>
+        <input class='inputarea' name="seller_name" placeholder='两个汉字以上，必填！'></input>
+      </view>
+      <view class='input'>
+        <view class='title'>简介</view>
+        <input class='inputarea' name="brief"></input>
+      </view>
+      <view class='input2'>
+        <view class='title2'>描述</view>
+        <textarea class='inputarea2' name="desc"></textarea>
+      </view>
+      <view class='input'>
+        <view class='title'>电话</view>
+        <input class='inputarea' name="phone" type="number"></input>
+      </view>
+      <view class='input'>
+        <view class='title'>店主姓名</view>
+        <input class='inputarea' name="owner" type="text"></input>
+      </view>
+      <view class='input'>
+        <view class='title'>行业分类</view>
+        <input class='inputarea' name="industry_type" type="text"></input>
+      </view>
+      <view class='input'>
+        <view class='title'>邮编</view>
+        <input class='inputarea' name="zipcode" type="text"></input>
+      </view>
+      <view class='input'>
+        <view class="title">所在地区</view>
+        <picker  name="region" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <view class='inputarea3'>
+            {{region[0]}}-{{region[1]}}-{{region[2]}}
+          </view>
+        </picker>
+      </view>
+      <view class='input'>
+        <view class='title'>详细地址</view>
+        <input class='inputarea' name="address" type="text"></input>
+      </view>
+      <view class='input'>
+        <view class='title'>主题广告语</view>
+        <input class='inputarea' name="slogan" type="text"></input>
+      </view>
+    </view>
+  <view class="btn-area">
+      <button class='btn' formType="submit" type='primary' hover-class='other-button-hover' >完成</button>
+    </view>
+  </form>
+</view>

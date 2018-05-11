@@ -1,0 +1,117 @@
+/* pages/index/createstore.wxss */
+
+page {
+  background-color: #f0f0f0;
+}
+
+.head-portrait {
+  width: 94%;
+  height: 150rpx;
+  float: left;
+  border: solid;
+  border-width: thin;
+  border-color: #f9f9f9;
+  font-size: 30rpx;
+  margin-left: 3%;
+  margin-top: 10rpx;
+  border-radius: 8rpx;
+  background-color: #fff;
+}
+
+image {
+  float: left;
+  width: 80px;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  padding-top: 1rpx;
+}
+
+
+.input {
+  width: 94%;
+  height: 90rpx;
+  float: left;
+  border: solid;
+  border-width: thin;
+  border-color: #f9f9f9;
+  font-size: 30rpx;
+  margin-left: 3%;
+  margin-top: 10rpx;
+  border-radius: 8rpx;
+  background-color: #fff;
+}
+
+.title1 {
+  width: 30%;
+  height: 100rpx;
+  float: left;
+  padding-top: 50rpx;
+  text-align: center;
+}
+
+.title {
+  width: 30%;
+  height: 90rpx;
+  float: left;
+  padding-top: 24rpx;
+  text-align: center;
+}
+
+.inputarea {
+  width: 70%;
+  height: 90rpx;
+  float: left;
+}
+
+.input2{
+  width: 94%;
+  height: 200rpx;
+  float: left;
+  border: solid;
+  border-width: thin;
+  border-color: #f9f9f9;
+  font-size: 30rpx;
+  margin-left: 3%;
+  margin-top: 10rpx;
+  border-radius: 8rpx;
+  background-color: #fff;
+}
+
+.title2 {
+  width: 30%;
+  height: 200rpx;
+  float: left;
+  padding-top: 24rpx;
+  text-align: center;
+}
+
+.inputarea2{
+  width: 70%;
+  height: 200rpx;
+  float: left;
+  padding-top: 24rpx;
+}
+
+.inputarea3{
+  width: 70%;
+  height: 90rpx;
+  float: left;
+  padding-top: 22rpx;
+}
+
+.btn-area{
+  height: 120rpx;
+  width: 100%;
+  float: left;
+  margin-top: 30rpx;
+}
+
+.btn{
+  width: 80%;
+}
+
+.other-button-hover {
+  background-color: rgba(178, 178, 178, 0.7);
+  opacity: 0.7;
+}

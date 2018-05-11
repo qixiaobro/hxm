@@ -16,10 +16,12 @@
       <view class='tools-name' bindtap='Click2'>扫码验证</view>
     </view>
     <view class='tools'>
-      <view class='tools-img'>
-        <image src='{{src3}}' alt="二维码"></image>
-      </view>
-      <view class='tools-name'>二维码</view>
+      <navigator url="../index/qrcode" open-type="navigate" hover-class="none">
+        <view class='tools-img'>
+          <image src='{{src3}}' alt="二维码"></image>
+        </view>
+        <view class='tools-name'>二维码</view>
+      </navigator>
     </view>
     <view class='tools'>
       <view class='tools-img'>

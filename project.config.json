@@ -9,8 +9,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.94",
-	"appid": "wx59322a7f7d46e61c",
-	"projectname": "%E4%B8%83%E5%BD%A9%E8%B6%A3%E7%9B%92",
+	"appid": "wxfda6f88432e53965",
+	"projectname": "%E7%8E%89%E5%8D%96%E4%BA%91%E5%BA%97",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -35,7 +35,7 @@
 				{
 					"id": 0,
 					"name": "1",
-					"pathName": "pages/manage/edit",
+					"pathName": "pages/xsgl/xsgl",
 					"query": ""
 				},
 				{

@@ -2,17 +2,17 @@
 <view class='container'>
   <view class='store-msg'>
     <view class='btn-box'>
-      <button id='btn' class="zan-btn zan-btn--small zan-btn--primary " hover-class="other-button-hover" bindtap='set'>编辑</button>
+      <button id='btn' class="zan-btn zan-btn--small zan-btn--primary " bindtap='set'>编辑</button>
     </view>
     <view class='logo-box'>
-      <image src='{{src1}}'></image>
+      <image src='{{avatar}}'></image>
     </view>
     <view class='detail-box'>
-      <view class='dianming-box'>
-        <view>店铺名称:{{dianming}}</view>
+      <view class='seller_name-box'>
+        <view>店铺名称:{{seller_name}}</view>
       </view>
-      <view class='jianjie-box '>
-        <view>店铺简介:{{jianjie}}</view>
+      <view class='brief-box '>
+        <view>店铺简介:{{brief}}</view>
       </view>
     </view>
 
@@ -45,10 +45,18 @@
           <view class='name'>销售管理</view>
         </view>
       </navigator>
-      <view class='img'>
-        <image src='{{img3}}'></image>
-        <view class='name'>顾客管理</view>
-      </view>
+      <navigator url="../guke/guke" open-type="navigate" hover-class="none">
+        <view class='img'>
+          <image src='{{img3}}'></image>
+          <view class='name'>顾客管理</view>
+        </view>
+      </navigator>
+      <navigator url="../guke/guke" open-type="navigate" hover-class="none">
+        <view class='img'>
+          <image src='{{img4}}'></image>
+          <view class='name'>幻灯片设置</view>
+        </view>
+      </navigator>
     </view>
   </view>
   <view class='fgx1'></view>

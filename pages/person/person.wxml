@@ -6,8 +6,8 @@
   </view>
   <view class='text2'>
     <view class='word'>性别:</view>
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-      <view class="picker">{{array[index]}}</view>
+    <picker bindchange="bindPickerChange" value="{{areaindex}}" range="{{area}}">
+      <view class="picker  ">{{area[areaIndex]}}</view>
     </picker>
   </view>
   <view class='text3'>
@@ -18,5 +18,5 @@
     <view class='word'>简介:</view>
     <textarea class='detail' placeholder='简单描述一下自己'></textarea>
   </view>
-  <button class='baocun'>保存</button>
+  <button class='baocun' type='primary'>保存</button>
 </view>

@@ -7,10 +7,11 @@ Page({
     winHeight: 0,
     // tab切换 
     currentTab: 0,
+    num:1,
+    total:1729.2,
+    yunfei:'0.0'
   },
-  onLoad: function () {
 
-  },
 
   onShow: function () {
   },

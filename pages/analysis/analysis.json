@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "经营分析"
+  "navigationBarTitleText": "经营分析",
+  "enablePullDownRefresh": true
 }
