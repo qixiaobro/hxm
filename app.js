@@ -35,5 +35,7 @@ App({
   },
   globalData: {
     userInfo: null,
+    dianming: "鞋铺",
+    jianjie: "一家专门卖鞋子的小店。"
   }
 })

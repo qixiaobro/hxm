@@ -51,7 +51,7 @@
           <view class='name'>顾客管理</view>
         </view>
       </navigator>
-      <navigator url="../guke/guke" open-type="navigate" hover-class="none">
+      <navigator url="../Sowingmap/Sowingmap" open-type="navigate" hover-class="none">
         <view class='img'>
           <image src='{{img4}}'></image>
           <view class='name'>幻灯片设置</view>

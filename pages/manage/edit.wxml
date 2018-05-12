@@ -7,7 +7,7 @@
     </view>
     <view class='input'>
       <view class='title'>店铺名称</view>
-      <input class='inputarea' name="seller_name" value='{{seller_name}}'></input>
+      <input class='inputarea' name="seller_name" value='{{seller_name}}' ></input>
     </view>
     <view class='input'>
       <view class='title'>简介</view>

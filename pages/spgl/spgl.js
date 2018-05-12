@@ -62,5 +62,10 @@ Page({
         currentTab: e.target.dataset.current
       })
     }
+  },
+  changeToGoodDetail:function(e){
+  wx.navigateTo({
+    url: '../spgl/shopdetail/shopdetail',
+  })
   }
 })

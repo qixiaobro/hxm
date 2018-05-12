@@ -3,9 +3,6 @@ import Http from '../../utils/http';
 //获取应用实例
 const app = getApp()
 
-
-
-
 Page({
   data: {
     src1: '../../imgs/list/store.png',
@@ -26,13 +23,11 @@ Page({
   },
   onPullDownRefresh: function () {
     wx.showNavigationBarLoading() //在标题栏中显示加载
+    var that = this
+    that.onLoad()
+    wx.hideNavigationBarLoading() //完成停止加载
+    wx.stopPullDownRefresh() //停止下拉刷新
 
-    //模拟加载
-    setTimeout(function () {
-      // complete
-      wx.hideNavigationBarLoading() //完成停止加载
-      wx.stopPullDownRefresh() //停止下拉刷新
-    }, 1000);
   },
   change1: function (e) {
     this.setData({
@@ -83,67 +78,7 @@ Page({
  */
   onLoad: function (options) {
     var that = this;
-    // 获取用户授权及信息
-    Http.authorize()
-      .then(() => Http.getUserInfo())
-      .then((res) => {
-        console.log(res);
-        Http.get('biz/seller/Seller/currentSeller').then(  //获取店铺信息
-          (res) => {
-            if (res.data.code == 0) {   //如果可以获取，则代表用户已创建店铺
-              console.log(res.data.data)
-            } else {                   //否则 提示用户需不需要创建店铺
-              wx.showModal({
-                title: '创建店铺',
-                content: '想要创建一个属于自己的店铺吗？',
-                success: function (res) {
-                  if (res.confirm) {
-                    console.log('用户点击确定')
-                    wx.navigateTo({
-                      url: '../index/createstore',
-                    })
-                  } else if (res.cancel) {
-                    console.log('用户点击取消')
-                  }
-                }
-              })   
-            }
-          }
-        );
-       /*   */
-        //用户信息数据处理操作
 
-        // if (!app.globalData.isReAuth) {
-        //   that.setData({
-        //     userInfo: res
-        //   })
-        //   try {
-        //     var ssid = wx.getStorageSync('ssid')
-        //     if (ssid) {
-        //       if (!app.globalData.changeState) {
-        //         that.getFavData(ssid);
-        //       }
-        //     }
-        //   } catch (e) {
-        //     console.log(e);
-        //   }
-        // }
-      }).catch(() => {
-        Http.getUserInfo().then((res) => {
-          // that.setData({
-          //   userInfo: res
-          // })
-          // try {
-          //   var ssid = wx.getStorageSync('ssid')
-          //   if (ssid) {
-          //     that.getFavData(ssid);
-          //   }
-          // } catch (e) {
-          //   console.log(e);
-          // }
-        })
-      })
-    //登录
     Http.login().then((res) => {
       // 获取到code之后的操作
       // 获取openid
@@ -153,17 +88,33 @@ Page({
           if (res.data.code == 0 && res.data.data.openid != '' && res.data.data.token != '') {
             wx.setStorageSync('openid', res.data.data.openid);
             wx.setStorageSync('Token', res.data.data.token);
-            
+            Http.get('biz/seller/Seller/currentSeller').then(  //获取店铺信息
+              (res) => {
+                if (res.data.code == 0) {   //如果可以获取，则代表用户已创建店铺
+                  console.log(res.data.data)
+                } else {                   //否则 提示用户需不需要创建店铺
+                  wx.showModal({
+                    title: '创建店铺',
+                    content: '想要创建一个属于自己的店铺吗？',
+                    success: function (res) {
+                      if (res.confirm) {
+                        console.log('用户点击确定')
+                        wx.navigateTo({
+                          url: '../index/createstore',
+                        })
+                      } else if (res.cancel) {
+                        console.log('用户点击取消')
+                      }
+                    }
+                  })
+                }
+              }
+            );
           } else {
             //获取openid失败操作
           }
         }
       );
     })
-    var self = this
-    //正常异步请求
-    // Http.get('userinfo').then(function (res) {
-    //   //返回数据处理
-    // });
   }
 })  
