@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <view class='search'>
-  <view class='shuru'>
-    <input placeholder=' 🔍输入商品名称' class='shuru1'></input>
+  <view>
+    <input placeholder=' 🔍输入商品名称'></input>
   </view>
   <view class='add'>
-    <image src='{{src1}}' alt="添加商品"></image>
+    <image src='{{src1}}' alt="添加商品" bindtap='addgoods'></image>
   </view>
 </view>
 <view class='text'>
@@ -16,127 +16,87 @@
 <view class='tab'>
   <view class="swiper-tab">
     <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部 </view>
-    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">分类1 </view>
-    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">分类2 </view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">热销 </view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">滞销 </view>
+    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">售罄 </view>
   </view>
 
-  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
-
-
-    <swiper-item class="swiper-item"> 
-      <view class='moren'>全 部</view>
-      <view>
-        <view class="zan-panel">
-          <view class="zan-card" bindtap='changeToGoodDetail'>
-            <view class="zan-card__thumb">
-              <image class="zan-card__img" src="https://img.yzcdn.cn/upload_files/2016/11/25/FpqPXlrMRjKwJs8VdTu3ZDJCj4j5.jpeg?imageView2/2/w/200/h/200/q/90/format/jpeg" mode="aspectFit"></image>
-            </view>
-            <view class="zan-card__detail">
-              <view class="zan-card__detail-row">
-                <view class="zan-card__right-col">¥ 999.99</view>
-                <view class="zan-card__left-col zan-ellipsis--l2">
-                  红烧牛肉【虚拟商品】【有库存】【有sku】
-                </view>
-              </view>
-              <view class="zan-card__detail-row zan-c-gray-darker">
-                <view class="zan-card__right-col">x2</view>
-                <view class="zan-card__left-col">
-                  3000克 50%
-                </view>
-              </view>
-              <view class="zan-card__detail-row zan-c-gray-darker">
-                <view class="zan-card__left-col zan-c-red">已发货</view>
-              </view>
-            </view>
-          </view>
-        </view>
-      </view>
-    </swiper-item>
-
-
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange">
 
     <swiper-item>
-      <view class='moren'>分类1</view>
-      <view>
-        <view class="zan-panel">
-          <view class="zan-card">
-            <view class="zan-card__thumb">
-              <image class="zan-card__img" src="https://img.yzcdn.cn/upload_files/2016/11/25/FpqPXlrMRjKwJs8VdTu3ZDJCj4j5.jpeg?imageView2/2/w/200/h/200/q/90/format/jpeg" mode="aspectFit"></image>
+      <view class='tab-title'>全 部</view>
+      <scroll-view scroll-y="true" style="height: 95%;">
+        <view class='list1' wx:for="{{list1}}" wx:for-item="item">
+          <view class='card'>
+            <view class='image-box'>
+              <image src="{{item.original_img}}"></image>
             </view>
-            <view class="zan-card__detail">
-              <view class="zan-card__detail-row">
-                <view class="zan-card__right-col">¥ 999.99</view>
-                <view class="zan-card__left-col zan-ellipsis--l2">
-                  红烧牛肉【虚拟商品】【有库存】【有sku】
-                </view>
-              </view>
-              <view class="zan-card__detail-row zan-c-gray-darker">
-                <view class="zan-card__right-col">x2</view>
-                <view class="zan-card__left-col">
-                  3000克 50%
-                </view>
-              </view>
-              <view class="zan-card__detail-row zan-c-gray-darker">
-                <view class="zan-card__left-col zan-c-red">已发货</view>
-              </view>
+            <view class='content-box'>
+              <view class='goods_name'>{{item.goods_name}}</view>
+              <view class='quantity'>库存：{{item.quantity}}</view>
+              <view class='shop_price'>￥{{item.shop_price}}</view>
             </view>
+            <view class='fgx'></view>
           </view>
         </view>
-      </view>
-      <view>
-        <view class="zan-panel">
-          <view class="zan-card">
-            <view class="zan-card__thumb">
-              <image class="zan-card__img" src="https://img.yzcdn.cn/upload_files/2016/11/25/FpqPXlrMRjKwJs8VdTu3ZDJCj4j5.jpeg?imageView2/2/w/200/h/200/q/90/format/jpeg" mode="aspectFit"></image>
-            </view>
-            <view class="zan-card__detail">
-              <view class="zan-card__detail-row">
-                <view class="zan-card__right-col">¥ 999.99</view>
-                <view class="zan-card__left-col zan-ellipsis--l2">
-                  红烧牛肉【虚拟商品】【有库存】【有sku】
-                </view>
-              </view>
-              <view class="zan-card__detail-row zan-c-gray-darker">
-                <view class="zan-card__right-col">x2</view>
-                <view class="zan-card__left-col">
-                  3000克 50%
-                </view>
-              </view>
-              <view class="zan-card__detail-row zan-c-gray-darker">
-                <view class="zan-card__left-col zan-c-red">已发货</view>
-              </view>
-            </view>
-          </view>
-        </view>
-      </view>
-      <view>
-        <view class="zan-panel">
-          <view class="zan-card">
-            <view class="zan-card__thumb">
-              <image class="zan-card__img" src="https://img.yzcdn.cn/upload_files/2016/11/25/FpqPXlrMRjKwJs8VdTu3ZDJCj4j5.jpeg?imageView2/2/w/200/h/200/q/90/format/jpeg" mode="aspectFit"></image>
-            </view>
-            <view class="zan-card__detail">
-              <view class="zan-card__detail-row">
-                <view class="zan-card__right-col">¥ 999.99</view>
-                <view class="zan-card__left-col zan-ellipsis--l2">
-                  红烧牛肉【虚拟商品】【有库存】【有sku】
-                </view>
-              </view>
-              <view class="zan-card__detail-row zan-c-gray-darker">
-                <view class="zan-card__right-col">x2</view>
-                <view class="zan-card__left-col">
-                  3000克 50%
-                </view>
-              </view>
-              <view class="zan-card__detail-row zan-c-gray-darker">
-                <view class="zan-card__left-col zan-c-red">已发货</view>
-              </view>
-            </view>
-          </view>
-        </view>
-      </view>
+      </scroll-view>
     </swiper-item>
 
+    <swiper-item>
+      <view class='tab-title'>热销</view>
+     <scroll-view scroll-y="true" style="height: 95%;">
+        <view class='list1' wx:for="{{list1}}" wx:for-item="item">
+          <view class='card'>
+            <view class='image-box'>
+              <image src="{{item.original_img}}"></image>
+            </view>
+            <view class='content-box'>
+              <view class='goods_name'>{{item.goods_name}}</view>
+              <view class='quantity'>库存：{{item.quantity}}</view>
+              <view class='shop_price'>￥{{item.shop_price}}</view>
+            </view>
+            <view class='fgx'></view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
 
+    <swiper-item>
+      <view class='tab-title'>滞销</view>
+      <scroll-view scroll-y="true" style="height: 95%;">
+        <view class='list1' wx:for="{{list1}}" wx:for-item="item">
+          <view class='card'>
+            <view class='image-box'>
+              <image src="{{item.original_img}}"></image>
+            </view>
+            <view class='content-box'>
+              <view class='goods_name'>{{item.goods_name}}</view>
+              <view class='quantity'>库存：{{item.quantity}}</view>
+              <view class='shop_price'>￥{{item.shop_price}}</view>
+            </view>
+            <view class='fgx'></view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+      <view class='tab-title'>售罄</view>
+      <scroll-view scroll-y="true" style="height: 95%;">
+        <view class='list1' wx:for="{{list1}}" wx:for-item="item">
+          <view class='card'>
+            <view class='image-box'>
+              <image src="{{item.original_img}}"></image>
+            </view>
+            <view class='content-box'>
+              <view class='goods_name'>{{item.goods_name}}</view>
+              <view class='quantity'>库存：{{item.quantity}}</view>
+              <view class='shop_price'>￥{{item.shop_price}}</view>
+            </view>
+            <view class='fgx'></view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
   </swiper>
 </view>

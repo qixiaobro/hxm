@@ -35,13 +35,13 @@
 				{
 					"id": 0,
 					"name": "1",
-					"pathName": "pages/xsgl/xsgl",
+					"pathName": "pages/spgl/spgl",
 					"query": ""
 				},
 				{
 					"id": 1,
 					"name": "2",
-					"pathName": "pages/spgl/shopdetail/shopdetail",
+					"pathName": "pages/spgl/addgoods/addgoods",
 					"query": ""
 				},
 				{

@@ -14,7 +14,8 @@
     "pages/index/qrcode",
     "pages/index/createstore",
     "pages/spgl/shopdetail/shopdetail",
-    "pages/Sowingmap/Sowingmap"
+    "pages/Sowingmap/Sowingmap",
+    "pages/spgl/addgoods/addgoods"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -84,14 +84,12 @@ Page({
       // 获取openid
       Http.get('api/wxapp/public/login', { code: res.code, app_type: 'WX_MM_MANAGE' }).then(
         (res) => {
-          console.log(res.data);
           if (res.data.code == 0 && res.data.data.openid != '' && res.data.data.token != '') {
             wx.setStorageSync('openid', res.data.data.openid);
             wx.setStorageSync('Token', res.data.data.token);
             Http.get('biz/seller/Seller/currentSeller').then(  //获取店铺信息
               (res) => {
                 if (res.data.code == 0) {   //如果可以获取，则代表用户已创建店铺
-                  console.log(res.data.data)
                 } else {                   //否则 提示用户需不需要创建店铺
                   wx.showModal({
                     title: '创建店铺',
@@ -109,6 +107,16 @@ Page({
                   })
                 }
               }
+
+            );
+            Http.get('biz/aid/slide/slide_list').then(
+              (res) => {
+                if (res.data.code == 0) {
+                  console.log(res.data.data)
+                } else {
+                }
+              }
+
             );
           } else {
             //获取openid失败操作
