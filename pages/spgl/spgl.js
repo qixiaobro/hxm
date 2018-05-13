@@ -3,24 +3,55 @@ var app = getApp()
 Page({
   data: {
     src1: '../../imgs/toolbars/add.png',
-    num1:36,
-    num2:1356,
+    num1: 36,
+    num2: 1356,
     currentTab: 0,
-    list1:[]
+    list1: [],
+    hasMore: true,
+    hidden: false,
   },
+  //加载商品信息
   onLoad: function () {
     var that = this;
     Http.get('biz/goods/Goods/goods_list').then(
       (res) => {
         if (res.data.code == 0) {
-            console.log(res.data);
-            that.setData({
-              list1:res.data.data
-            })
+          that.setData({
+            list1: res.data.data,
+            hidden: true,
+          })
         } else {
         }
       }
     );
+  },
+  //加载更多
+  loadMore: function (e) {
+    var that = this;
+    that.setData({
+      hasRefesh: true,
+    });
+    if (!this.data.hasMore) return
+    Http.get('biz/goods/Goods/goods_list').then(
+      (res) => {
+        if (res.data.code == 0) {
+          that.setData({
+            list1: res.data.data,
+            hidden: true,
+            hasMore: false,
+          })
+        } else {
+        }
+      }
+    );
+  },
+  onPullDownRefresh: function () {            //刷新商品信息
+    var that = this
+    wx.showNavigationBarLoading() //在标题栏中显示加载
+    that.onLoad();
+    wx.hideNavigationBarLoading(); //完成停止加载
+    wx.stopPullDownRefresh(); //停止下拉刷新
+
   },
   /** 
      * 滑动切换tab 
@@ -43,12 +74,12 @@ Page({
       })
     }
   },
-  changeToGoodDetail:function(e){
-  wx.navigateTo({
-    url: '../spgl/shopdetail/shopdetail',
-  })
+  changeToGoodDetail: function (e) {
+    wx.navigateTo({
+      url: '../spgl/shopdetail/shopdetail',
+    })
   },
-  addgoods:function(e){
+  addgoods: function (e) {
     wx.navigateTo({
       url: '../spgl/addgoods/addgoods',
     })

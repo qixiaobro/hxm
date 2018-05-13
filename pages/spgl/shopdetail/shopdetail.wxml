@@ -1,84 +1,76 @@
+<!--pages/spgl/addgoods/addgoods.wxml-->
 <view class='good_detail'>
 
-<view class='detail_content'>
-<form bindsubmit="formSubmit" bindreset="formReset">
-  <view class="section section_gap form_item">
-    <view class="section__title label">商品名称</view>
-    <input class='psinput' placeholder="请编辑商品名称"/>
-  </view>
-  <view class="section section_gap form_item">
-    <view class="section__title label">商品类型</view>
-    <view class='psinput'>
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-    <view class="picker ">
-      当前选择：{{array[index]}}
-    </view>
-  </picker>
-    </view>
-  </view>
-  <view class="section section_gap form_item">
-    <view class="section__title label">商品品牌</view>
-    <input class='psinput' placeholder="请编辑商品品牌"/>
-  </view>
+  <view class='detail_content'>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section img form_item">
+        <view class="section__title label">商品图片</view>
+        <view class='image-box' bindtap='chooseImg'>
+        <image src='{{original_img}}'></image>
+        </view>
+      </view>
+      <view class="section section_gap form_item">
+        <view class="section__title label">商品名称</view>
+        <input class='psinput' name="goods_name" value='{{goods_name}}'/>
+      </view>
+      <view class="section section_gap form_item">
+        <view class="section__title label">商品类型</view>
+        <input class='psinput' name="cat_id" value='{{cat_id}}'/>
+      </view>
+      <view class="section section_gap form_item">
+        <view class="section__title label">商品品牌</view>
+        <input class='psinput' name="brand_id" value='{{brand_id}}'/>
+      </view>
 
-   <view class="section section_gap form_item">
-    <view class="section__title label">重量</view>
-    <input class='psinput' placeholder="重量(g)"/>
-  </view>
+      <view class="section section_gap form_item">
+        <view class="section__title label">重量</view>
+        <input class='psinput' name="weight" value='{{weight}}' />
+      </view>
 
-   <view class="section section_gap form_item">
-    <view class="section__title label">制造商</view>
-    <input class='psinput' placeholder="请编辑制造商"/>
-  </view>
+      <view class="section section_gap form_item">
+        <view class="section__title label">制造商</view>
+        <input class='psinput' name="vendor" value='{{vendor}}' />
+      </view>
 
-   <view class="section section_gap form_item">
-    <view class="section__title label">销售价格</view>
-    <input class='psinput' placeholder="请编辑销售价格"/>
-  </view>
+      <view class="section section_gap form_item">
+        <view class="section__title label">销售价格</view>
+        <input class='psinput' name="shop_price" value='{{shop_price}}' />
+      </view>
 
-   <view class="section section_gap form_item">
-    <view class="section__title label">市场价格</view>
-    <input class='psinput' placeholder="请编辑市场价格"/>
-  </view>
+      <view class="section section_gap form_item">
+        <view class="section__title label">市场价格</view>
+        <input class='psinput' name="market_price" value='{{market_price}}' />
+      </view>
 
-  <view class="section section_gap form_item">
-    <view class="section__title label">进价</view>
-    <input class='psinput' placeholder="请输入进价"/>
-  </view>
+      <view class="section section_gap form_item">
+        <view class="section__title label">进价</view>
+        <input class='psinput' name="cost_price" value='{{cost_price}}' />
+      </view>
 
-  <view class="section section_gap form_item">
-    <view class="section__title label">库存数量</view>
-    <input class='psinput' placeholder="请输入库存数量"/>
-  </view>
+      <view class="section section_gap form_item">
+        <view class="section__title label">库存数量</view>
+        <input class='psinput' name="quantity" value='{{quantity}}' />
+      </view>
 
-  <view class="section section_gap form_item">
-    <view class="section__title label">商品描述</view>
-    <input class='psinput' placeholder="请输入商品描述"/>
-  </view>
+      <view class="section section_gap form_item">
+        <view class="section__title label">商品描述</view>
+        <input class='psinput' name="goods_content" value='{{goods_content}}' />
+      </view>
 
-  <view class="section section_gap form_item">
-    <view class="section__title label">配送方式</view>
-    <input class='psinput' placeholder="请编辑配送方式"/>
-  </view>
+      <view class="section section_gap form_item">
+        <view class="section__title label">配送方式</view>
+        <input class='psinput' name="shipping_method" value='{{shipping_method}}' />
+      </view>
 
-  <view class="section section_gap form_item">
-    <view class="section__title label">配送说明</view>
-    <input class='psinput' placeholder="请输入配送说明"/>
+      <view class="section section_gap form_item">
+        <view class="section__title label">配送说明</view>
+        <input class='psinput' name="shipping_remark" value='{{shipping_remark}}' />
+      </view>
+      <view class="section section_gap form_item">
+        <view class="section__title label">是否新品</view>
+        <input class='psinput' name="is_new" value='{{is_new}}' />
+      </view>
+          <button class='psbtn psbtn1' type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="primary" formType="submit"> 修改 </button>
+    </form>
   </view>
-  <view class="section section_gap form_item">
-    <view class="section__title label">配送说明</view>
-    <view class='psinput' style='border:none;'>
-    <radio-group class="radio-group" bindchange="radioChange">
-  <label class="radio" wx:for="{{items}}">
-    <radio style='margin-left:8px;' value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-  </label>
-</radio-group>
-    </view>
-  </view>
-</form>
-<button class='psbtn psbtn1' type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
-        disabled="{{disabled}}" bindtap="primary"> 编辑 </button>
-<button class='psbtn' type="warn" size="{{warnSize}}" loading="{{loading}}" plain="{{plain}}"
-        disabled="{{disabled}}" bindtap="warn"> 删除 </button>
-</view>
 </view>

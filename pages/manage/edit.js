@@ -43,8 +43,8 @@ Page({
   uploadPhoto: function () {
     var that = this
     var para = para ? para : {};            //参数  带上openid和token
-    para.token = wx.getStorageSync('openid');
-    para.openid = wx.getStorageSync('Token');
+    para.token = wx.getStorageSync('Token');
+    para.openid = wx.getStorageSync('openid');
     wx.uploadFile({
       url: 'https://v.huxiamai.com/api/asset/file/upload',  
       filePath: that.data.avatar,

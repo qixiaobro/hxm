@@ -25,18 +25,29 @@
 
     <swiper-item>
       <view class='tab-title'>全 部</view>
-      <scroll-view scroll-y="true" style="height: 95%;">
+      <scroll-view scroll-y="true" style="height: 95%;" bindscrolltolower="loadMore">
         <view class='list1' wx:for="{{list1}}" wx:for-item="item">
-          <view class='card'>
-            <view class='image-box'>
-              <image src="{{item.original_img}}"></image>
+          <navigator url="../spgl/shopdetail/shopdetail?goods_id={{item.goods_id}}">
+            <view class='card'>
+              <view class='image-box'>
+                <image src="{{item.original_img}}"></image>
+              </view>
+              <view class='content-box'>
+                <view class='goods_name'>{{item.goods_name}}</view>
+                <view class='quantity'>库存：{{item.quantity}}</view>
+                <view class='shop_price'>￥{{item.shop_price}}</view>
+              </view>
+              <view class='fgx'></view>
             </view>
-            <view class='content-box'>
-              <view class='goods_name'>{{item.goods_name}}</view>
-              <view class='quantity'>库存：{{item.quantity}}</view>
-              <view class='shop_price'>￥{{item.shop_price}}</view>
-            </view>
-            <view class='fgx'></view>
+          </navigator>
+        </view>
+        <view class="tips1">
+          <view wx:if="{{hasMore}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+            <icon type="waiting" size="45" />
+            <text>玩命的加载中...</text>
+          </view>
+          <view wx:else style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+            <text>没有更多内容了</text>
           </view>
         </view>
       </scroll-view>
@@ -44,18 +55,29 @@
 
     <swiper-item>
       <view class='tab-title'>热销</view>
-     <scroll-view scroll-y="true" style="height: 95%;">
+       <scroll-view scroll-y="true" style="height: 95%;" bindscrolltolower="loadMore">
         <view class='list1' wx:for="{{list1}}" wx:for-item="item">
-          <view class='card'>
-            <view class='image-box'>
-              <image src="{{item.original_img}}"></image>
+          <navigator url="../spgl/shopdetail/shopdetail?goods_id={{item.goods_id}}">
+            <view class='card'>
+              <view class='image-box'>
+                <image src="{{item.original_img}}"></image>
+              </view>
+              <view class='content-box'>
+                <view class='goods_name'>{{item.goods_name}}</view>
+                <view class='quantity'>库存：{{item.quantity}}</view>
+                <view class='shop_price'>￥{{item.shop_price}}</view>
+              </view>
+              <view class='fgx'></view>
             </view>
-            <view class='content-box'>
-              <view class='goods_name'>{{item.goods_name}}</view>
-              <view class='quantity'>库存：{{item.quantity}}</view>
-              <view class='shop_price'>￥{{item.shop_price}}</view>
-            </view>
-            <view class='fgx'></view>
+          </navigator>
+        </view>
+        <view class="tips1">
+          <view wx:if="{{hasMore}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+            <icon type="waiting" size="45" />
+            <text>玩命的加载中...</text>
+          </view>
+          <view wx:else style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+            <text>没有更多内容了</text>
           </view>
         </view>
       </scroll-view>
@@ -63,18 +85,29 @@
 
     <swiper-item>
       <view class='tab-title'>滞销</view>
-      <scroll-view scroll-y="true" style="height: 95%;">
+      <scroll-view scroll-y="true" style="height: 95%;" bindscrolltolower="loadMore">
         <view class='list1' wx:for="{{list1}}" wx:for-item="item">
-          <view class='card'>
-            <view class='image-box'>
-              <image src="{{item.original_img}}"></image>
+          <navigator url="../spgl/shopdetail/shopdetail?goods_id={{item.goods_id}}">
+            <view class='card'>
+              <view class='image-box'>
+                <image src="{{item.original_img}}"></image>
+              </view>
+              <view class='content-box'>
+                <view class='goods_name'>{{item.goods_name}}</view>
+                <view class='quantity'>库存：{{item.quantity}}</view>
+                <view class='shop_price'>￥{{item.shop_price}}</view>
+              </view>
+              <view class='fgx'></view>
             </view>
-            <view class='content-box'>
-              <view class='goods_name'>{{item.goods_name}}</view>
-              <view class='quantity'>库存：{{item.quantity}}</view>
-              <view class='shop_price'>￥{{item.shop_price}}</view>
-            </view>
-            <view class='fgx'></view>
+          </navigator>
+        </view>
+        <view class="tips1">
+          <view wx:if="{{hasMore}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+            <icon type="waiting" size="45" />
+            <text>玩命的加载中...</text>
+          </view>
+          <view wx:else style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+            <text>没有更多内容了</text>
           </view>
         </view>
       </scroll-view>
@@ -82,18 +115,29 @@
 
     <swiper-item>
       <view class='tab-title'>售罄</view>
-      <scroll-view scroll-y="true" style="height: 95%;">
+      <scroll-view scroll-y="true" style="height: 95%;" bindscrolltolower="loadMore">
         <view class='list1' wx:for="{{list1}}" wx:for-item="item">
-          <view class='card'>
-            <view class='image-box'>
-              <image src="{{item.original_img}}"></image>
+          <navigator url="../spgl/shopdetail/shopdetail?goods_id={{item.goods_id}}">
+            <view class='card'>
+              <view class='image-box'>
+                <image src="{{item.original_img}}"></image>
+              </view>
+              <view class='content-box'>
+                <view class='goods_name'>{{item.goods_name}}</view>
+                <view class='quantity'>库存：{{item.quantity}}</view>
+                <view class='shop_price'>￥{{item.shop_price}}</view>
+              </view>
+              <view class='fgx'></view>
             </view>
-            <view class='content-box'>
-              <view class='goods_name'>{{item.goods_name}}</view>
-              <view class='quantity'>库存：{{item.quantity}}</view>
-              <view class='shop_price'>￥{{item.shop_price}}</view>
-            </view>
-            <view class='fgx'></view>
+          </navigator>
+        </view>
+        <view class="tips1">
+          <view wx:if="{{hasMore}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+            <icon type="waiting" size="45" />
+            <text>玩命的加载中...</text>
+          </view>
+          <view wx:else style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+            <text>没有更多内容了</text>
           </view>
         </view>
       </scroll-view>

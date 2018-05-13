@@ -1,3 +1,4 @@
+/* pages/spgl/addgoods/addgoods.wxss */
 .label{
   display: inline-block;
   font-size: 14px;
@@ -45,4 +46,14 @@
   margin-right: 20px;
   padding-left: 10px;
   border: 1px solid #dcdfe6;
+}
+
+.image-box{
+  width: 70%;
+  height: 200rpx;
+}
+
+.image-box image{
+  width: 50%;
+  height: 100%;
 }

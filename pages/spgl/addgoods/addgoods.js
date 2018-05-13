@@ -23,7 +23,7 @@ Page({
     original_img:'',
     shipping_method:'',
     shipping_remark:'',
-    is_newL:'',
+    is_new:'',
     original_img2: '/imgs/toolbars/addgoods.png',
   },
   chooseImg: function () {              //图片选择函数
@@ -75,11 +75,11 @@ Page({
     var that = this
     if(e.detail.value=='是'){
       that.setData({
-        is_newL: 1
+        is_new: 1
       })
     }else{
       that.setData({
-        is_newL: 0
+        is_new: 0
       })
     }
     
